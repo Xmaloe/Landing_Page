@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabsContainer = document.querySelectorAll('[data-tab-id]');
     const questions = document.querySelectorAll('[data-faq-question]');
 
-    const heroSection = document.querySelector('hero');
+    const heroSection = document.querySelector('.hero');
     const alturaHero = heroSection.clientHeight;
 
     window.addEventListener('scroll', function() {
