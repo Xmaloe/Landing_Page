@@ -5,6 +5,7 @@
 @use 'available-devices';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -23,6 +24,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -75,16 +77,43 @@ body {
 }
 
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 18px;
     color: variaveis.$TwoColor;
-    background-color: #6421ff;
+    background-color: variaveis.$ButtonOne;
     text-transform: uppercase;
     border-radius: 6px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid  variaveis.$ButtonOne;
+
+    &:hover {
+        background-color: lighten(variaveis.$ButtonOne, 7%);
+    }
+
+    &--secondary {
+        background-color: variaveis.$ButtonTwo;
+        border-color: variaveis.$ButtonTwo;
+
+        &:hover {
+            background-color: lighten(variaveis.$ButtonTwo, 7%);
+        }
+    }
+
+    &--dark {
+        background-color: rgba(variaveis.$Buttondark, 0.8);
+        border-color: variaveis.$TwoColor;
+
+        &:hover {
+            background-color: variaveis.$TwoColor;
+            color:  variaveis.$background;
+        }
+    }
 }
 
 .image-text-section {
